@@ -1,0 +1,30 @@
+{
+	"name": "reson-parse",
+	"version": "1.0.0",
+	"description": "Json parser for reson.",
+	"main": "index.js",
+	"keywords": [
+		"json",
+		"abstract",
+		"syntax",
+		"tree",
+		"ast",
+		"parse",
+		"unified"
+	],
+	"author": "Paul Zimmer",
+	"license": "MIT",
+	"scripts": {
+		"tap": "tap -cRspec --100 ./test/*.js",
+		"test": "nyc npm run tap"
+	},
+	"devDependencies": {
+		"tap": "^12.1.1",
+		"unified": "^7.1.0",
+		"xo": "^0.23.0"
+	},
+	"dependencies": {
+		"pegjs": "^0.10.0",
+		"unherit": "^1.1.1"
+	}
+}
