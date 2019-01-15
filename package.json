@@ -1,0 +1,27 @@
+{
+	"name": "reson",
+	"version": "1.0.0",
+	"description": "Json processor built on unifiedjs",
+	"private": true,
+	"author": "Paul Zimmer",
+	"license": "MIT",
+	"scripts": {
+		"bootstrap": "lerna bootstrap",
+		"lint": "lerna run xo",
+		"tap": "tap -cRspec packages/*/test?\\(.js\\)",
+		"test": "nyc npm run tap",
+		"clean": "lerna clean"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mrzmmr/reson.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mrzmmr/reson/issues"
+	},
+	"homepage": "https://github.com/mrzmmr/reson#readme",
+	"devDependencies": {
+		"lerna": "^3.10.5",
+		"tap": "^12.1.1"
+	}
+}
