@@ -6,11 +6,12 @@
 	"author": "Paul Zimmer",
 	"license": "MIT",
 	"scripts": {
-		"bootstrap": "lerna bootstrap",
 		"lint": "lerna run xo",
-		"tap": "tap -cRspec packages/*/test?\\(.js\\)",
-		"test": "nyc npm run tap",
-		"clean": "lerna clean"
+		"clean": "lerna clean",
+		"bootstrap": "lerna bootstrap --no-ci",
+		"report": "nyc report --reporter=text-lcov | coveralls",
+		"test": "tap -cRspec packages/*/test?\\(.js\\)",
+		"postinstall": "npm run bootstrap"
 	},
 	"repository": {
 		"type": "git",
@@ -21,6 +22,7 @@
 	},
 	"homepage": "https://github.com/mrzmmr/reson#readme",
 	"devDependencies": {
+		"coveralls": "^3.0.2",
 		"lerna": "^3.10.5",
 		"tap": "^12.1.1"
 	}
