@@ -19,7 +19,7 @@
 	"license": "MIT",
 	"scripts": {
 		"xo": "xo --fix",
-		"tap": "tap -cRspec --100 ./test/*.js",
+		"tap": "tap -Rspec --100 ./test/*.js",
 		"test": "nyc npm run tap"
 	},
 	"devDependencies": {

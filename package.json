@@ -10,7 +10,7 @@
 		"clean": "lerna clean",
 		"bootstrap": "lerna bootstrap --no-ci",
 		"report": "nyc report --reporter=text-lcov | coveralls",
-		"test": "tap -cRspec packages/*/test?\\(.js\\)",
+		"test": "tap -Rspec --cov packages/*/test?\\(.js\\)",
 		"postinstall": "npm run bootstrap"
 	},
 	"repository": {
