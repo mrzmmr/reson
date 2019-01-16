@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "Json parser for reson.",
 	"main": "index.js",
+	"engines": {
+		"node": ">=6.0"
+	},
 	"keywords": [
 		"json",
 		"abstract",
@@ -15,6 +18,7 @@
 	"author": "Paul Zimmer",
 	"license": "MIT",
 	"scripts": {
+		"xo": "xo --fix",
 		"tap": "tap -cRspec --100 ./test/*.js",
 		"test": "nyc npm run tap"
 	},
