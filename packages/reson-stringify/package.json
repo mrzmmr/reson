@@ -1,0 +1,33 @@
+{
+	"name": "reson-stringify",
+	"version": "1.0.0",
+	"description": "Json compiler for reson.",
+	"main": "index.js",
+	"engines": {
+		"node": ">=6.0"
+	},
+	"keywords": [
+		"json",
+		"abstract",
+		"syntax",
+		"tree",
+		"ast",
+		"stringify",
+		"unified"
+	],
+	"author": "Paul Zimmer",
+	"license": "MIT",
+	"scripts": {
+		"xo": "xo --fix",
+		"tap": "tap -cRspec --100 test.js",
+		"test": "npm run tap"
+	},
+	"devDependencies": {
+		"tap": "^12.1.1",
+		"unified": "^7.1.0",
+		"xo": "^0.23.0"
+	},
+	"dependencies": {
+		"unherit": "^1.1.1"
+	}
+}
