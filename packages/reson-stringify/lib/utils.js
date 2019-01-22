@@ -18,6 +18,10 @@ function check(options = defaultOptions) {
 		};
 	}
 
+	if (typeof options === 'object' && !Array.isArray(options)) {
+		options = Object.assign({}, defaultOptions, options)
+	}
+
 	if (typeof options !== 'object' || Array.isArray(options)) {
 		throw new TypeError(
 			`Unexpected type \`${

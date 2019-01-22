@@ -39,6 +39,19 @@ test('reson().stringify()', t => {
 		'should throw with bad option.'
 	);
 
+	t.doesNotThrow(() => {
+		unified()
+		.use(reson, {})
+		.use(function () {
+			t.equal(
+				this.Compiler.prototype.options.tabs,
+				2,
+				'should default to default options for `tabs`.'
+			)
+		})
+		.freeze()
+	})
+
 	t.equal(
 		unified().use(reson, 4).stringify(
 			{type: 'string', value: 'one', position: {
