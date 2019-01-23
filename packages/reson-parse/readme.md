@@ -71,8 +71,8 @@ Replace tabs with spaces and specify how many spaces equal one tab. For example:
 
 ```js
 unified()
-	.use(parser)
-	.use(stringify, {tabs: 4})
+	.use(parser, {tabs: 4})
+	.use(stringify)
 	.processSync('[\t1\t]').toString()
 ```
 
@@ -84,7 +84,7 @@ Outputs:
 
 ## License
 
-[MIT][license] © Paul Zimmer
+[MIT][license] © [Paul Zimmer][author]
 
 [parser]: https://github.com/unifiedjs/unified#processorparser
 
@@ -99,3 +99,5 @@ Outputs:
 [data]: https://github.com/unifiedjs/unified#processordatakey-value
 
 [license]: https://github.com/mrzmmr/reson/blob/master/license
+
+[author]: https://github.com/mrzmmr
