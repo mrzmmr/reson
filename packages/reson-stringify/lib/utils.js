@@ -8,7 +8,7 @@ module.exports = {
 };
 
 const defaultOptions = {
-	tabs: 2
+	tabs: 0
 };
 
 function check(options = defaultOptions) {

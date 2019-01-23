@@ -45,7 +45,7 @@ test('reson().stringify()', t => {
 		.use(function () {
 			t.equal(
 				this.Compiler.prototype.options.tabs,
-				2,
+				0,
 				'should default to default options for `tabs`.'
 			)
 		})
