@@ -1,8 +1,12 @@
 # reson-parse
 
-A [parser][] for [unified][] that transforms json into a [unist][] tree. Used in the [reson][] [processor][] .
+A [parser][] for [unified][] to transform json into a [unist][] tree. Used in the [reson][] [processor][].
 
 ## Installation
+
+```sh
+npm install reson-parse
+```
 
 ## Usage
 
@@ -10,8 +14,8 @@ With the following json file `example.json`:
 
 ```json
 {
-    "type": "string",
-    "value": "hello"
+	"type": "string",
+	"value": "hello"
 }
 ```
 
@@ -47,9 +51,40 @@ root[1] (1:1-5:1, 0-47)
          └─ string: "hello" (3:14-3:21, 37-44)
 ```
 
-[MIT][license] © Paul Zimmer
+## API
 
-<!-- definitions -->
+### `processor.use(parser[, options])`
+
+#### `options`
+
+Type: `Object`
+
+Options can be passed directly, or later through [`processor.data()`][data].
+
+##### `options.tabs`
+
+Type: `Number`
+  
+Default: `2`
+
+Replace tabs with spaces and specify how many spaces equal one tab. For example:
+
+```js
+unified()
+	.use(parser)
+	.use(stringify, {tabs: 4})
+	.processSync('[\t1\t]').toString()
+```
+
+Outputs:
+
+```js
+[    1    ]
+```
+
+## License
+
+[MIT][license] © Paul Zimmer
 
 [parser]: https://github.com/unifiedjs/unified#processorparser
 
@@ -57,11 +92,10 @@ root[1] (1:1-5:1, 0-47)
 
 [unified]: https://github.com/unifiedjs/unified
 
-[utilities]: https://github.com/syntax-tree/unist#list-of-utilities
-
 [reson]: https://github.com/mrzmmr/reson/blob/master/packages/reson
 
 [processor]: https://github.com/unifiedjs/unified#processor
 
-[license]: https://github.com/mrzmmr/reson/blob/master/license
+[data]: https://github.com/unifiedjs/unified#processordatakey-value
 
+[license]: https://github.com/mrzmmr/reson/blob/master/license
