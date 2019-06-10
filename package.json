@@ -1,6 +1,6 @@
 {
 	"name": "reson",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Json processor built on unifiedjs",
 	"private": true,
 	"author": "Paul Zimmer",
