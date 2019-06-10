@@ -23,7 +23,7 @@
 	"homepage": "https://github.com/mrzmmr/reson#readme",
 	"devDependencies": {
 		"coveralls": "^3.0.2",
-		"lerna": "^3.10.5",
-		"tap": "^12.1.1"
+		"lerna": "^3.15.0",
+		"tap": "^14.2.2"
 	}
 }
