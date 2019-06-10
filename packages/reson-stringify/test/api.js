@@ -41,15 +41,15 @@ test('reson().stringify()', t => {
 
 	t.doesNotThrow(() => {
 		unified()
-		.use(reson, {})
-		.use(function () {
-			t.equal(
-				this.Compiler.prototype.options.tabs,
-				0,
-				'should default to default options for `tabs`.'
-			)
-		})
-		.freeze()
+			.use(reson, {})
+			.use(function () {
+				t.equal(
+					this.Compiler.prototype.options.tabs,
+					0,
+					'should default to default options for `tabs`.'
+				)
+			})
+			.freeze()
 	})
 
 	t.equal(

@@ -101,7 +101,7 @@ function indents(indent = [0, 0, 0, 0], tabs = 0) {
 		if (tabs > 0) {
 			returns.push(
 				'\t'.repeat(dent / tabs) +
-					' '.repeat(dent % tabs)
+				' '.repeat(dent % tabs)
 			);
 			continue;
 		}

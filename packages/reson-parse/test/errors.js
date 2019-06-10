@@ -57,22 +57,22 @@ test('reson().parse() (errors)', t => {
 
 	t.throws(
 		() => processor()
-			.use(function () {
-				this.Parser.prototype.rules.tokens = () => {
-					return 'Tokens = "true"';
-				};
-			})
-			.parse('{ false, true }'),
+		.use(function () {
+			this.Parser.prototype.rules.tokens = () => {
+				return 'Tokens = "true"';
+			};
+		})
+		.parse('{ false, true }'),
 		/Unexpected token: f/,
 		'should fall back to peg error if tokens rule does not match.'
 	);
 
 	t.throws(
 		() => processor()
-			.use(function () {
-				this.Parser.prototype.order.push('hello');
-			})
-			.parse(''),
+		.use(function () {
+			this.Parser.prototype.order.push('hello');
+		})
+		.parse(''),
 		/Rule "hello" is not defined./,
 		'should throw if building parser fails with bad peg grammar.'
 	);
