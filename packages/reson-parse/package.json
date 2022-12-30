@@ -23,7 +23,7 @@
 		"test": "nyc npm run tap"
 	},
 	"devDependencies": {
-		"tap": "^12.1.1",
+		"tap": "^14.11.0",
 		"unified": "^7.1.0",
 		"xo": "^0.23.0"
 	},
